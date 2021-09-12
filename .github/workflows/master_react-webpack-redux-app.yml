@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'react-webpack-redux-app'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_97ef588599314791959d7d4a2eb2bd1e }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1c29fe3c99534a1bad5688427ef0ad8f }}
         package: .
