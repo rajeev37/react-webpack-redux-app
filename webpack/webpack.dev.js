@@ -12,7 +12,7 @@ module.exports = merge(common, {
         filename: "index.bundle.js"
     },
     devServer: {
-        port: 4000,
+        port: process.env.port || 4000,
         watchContentBase: true
     }
 })
