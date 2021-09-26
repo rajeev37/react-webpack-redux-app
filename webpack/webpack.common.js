@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
+    entry: ['@babel/polyfill', './src/index.js'],
     module: {
         rules: [
             {
@@ -11,7 +11,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(sa|sc|c)ss$/,
+                exclude: /node_modules/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",

@@ -1,20 +1,16 @@
 require("file-loader?name=[name].[ext]!./index.html");
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import allReducers from "./reducers";
+import store from "./redux/store";
 import { App} from "./App";
-import "./App.scss";
-
-let store = createStore(
-    allReducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import "./styles/App.scss";
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App/>
-    </Provider>
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>
 , document.getElementById("root"));
 
